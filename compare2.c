@@ -1,12 +1,33 @@
-#include <stdio.h>
-int main(int a, int b)
+#include<stdio.h>
+int input()
+{
+  int a;
+  printf("enter the number");
+  scanf("%d",&a);
+  return a;
+}
+int compare(int a, int b)
 {
   int c;
-  if (a<b){
+  if (a<b)
+  {
     c=b;
   }
-   else {
+  else
+  {
     c=a;
   }
-   return c;
+  return c;
+  }
+void output(int c)
+{
+  printf("largest is %d\n",c);
+}
+int main(void)
+{
+  int a,b,c;
+  a= input();
+  b= input();
+  c= compare(a,b);
+  output(c);
 }
